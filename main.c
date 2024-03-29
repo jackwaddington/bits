@@ -1,4 +1,5 @@
 #include "bits.h"
+#include <stdio.h>
 
 void test1(void)
 {
@@ -55,11 +56,60 @@ void	test4(void)
 	unsigned char o = 4;
 	print_bin(o);
 	print_bin((o == 4) ? flip_LHS(o) : flip_RHS(o));
+	print_bin((o >> 4) | (o << 4));
+
+}
+
+void	test5(void)
+{
+	unsigned char a = 192;
+	unsigned char b = 160;
+	printf("we start with these two, a and b:\n");
+	print_bin(a);
+	print_bin(b);
+
+	printf("\na & b - AND\n");
+	print_bin(a);
+	print_bin(b);
+	printf("--------\n");
+	print_bin(a & b);
+	printf("--------\n");
+	
+	printf("\na | b - OR\n");
+	print_bin(a);
+	print_bin(b);
+	printf("--------\n");
+	print_bin(a | b);
+	printf("--------\n");
+	
+	printf("\na ^ b - Exclusive OR\n");
+	print_bin(a);
+	print_bin(b);
+	printf("--------\n");
+	print_bin(a ^ b);
+	printf("--------\n");
+	
+	printf("\n ~a - NOT\n");
+	print_bin(a);
+	printf("--------\n");
+	print_bin(~a);
+	printf("--------\n");
+
+	printf("\n ~b - NOT\n");
+	print_bin(b);
+	printf("--------\n");
+	print_bin(~b);
+	printf("--------\n");
+}
+
+void test6(void)
+{
+	print_bin(160);
+	print_bin(reverse_bits1(160));
+	print_bin(reverse_bits2(160));
 }
 
 
-
-#include <stdio.h>
 int main(void)
 {
 	printf("\n\nTEST 1\ncycle through flipping each switch\n");
@@ -74,4 +124,9 @@ int main(void)
 	printf("\n\nTEST 4\nlets try some more\n\n");
 	test4();
 
+	printf("\n\nTEST 5\nlets try and, with two bis\n\n");
+	test5();
+
+	printf("\n\nTEST 6\nexam questions\n");
+	test6();
 }

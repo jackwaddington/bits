@@ -27,4 +27,9 @@ unsigned char move_right(unsigned char octet);
 unsigned char move_left_n(unsigned char octet, int n);
 unsigned char move_right_n(unsigned char octet, int n);
 
+// exam //
+
+unsigned char reverse_bits1(unsigned char octet);
+unsigned char reverse_bits2(unsigned char octet);
+
 #endif

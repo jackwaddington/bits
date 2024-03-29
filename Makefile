@@ -1,7 +1,7 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-SOURCES = main.c moves.c switches.c printers.c
+SOURCES = main.c moves.c switches.c printers.c exam.c
 
 OBJECTS = $(SOURCES:.c=.o)
 	
