@@ -50,6 +50,15 @@ void test3(void)
 	   print_bin(o = move_right_n(o, i));	
 }
 
+void	test4(void)
+{
+	unsigned char o = 4;
+	print_bin(o);
+	print_bin((o == 4) ? flip_LHS(o) : flip_RHS(o));
+}
+
+
+
 #include <stdio.h>
 int main(void)
 {
@@ -61,5 +70,8 @@ int main(void)
 
 	printf("\n\nTEST 3\nshift the variables\n\n");
 	test3();
+
+	printf("\n\nTEST 4\nlets try some more\n\n");
+	test4();
 
 }
